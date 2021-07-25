@@ -51,28 +51,24 @@
 // console.log(reg1);
 
 // TASK 4
-var submit=document.getElementById("submit");
-submit.addEventListener("click", function(e){
-    e.preventDefault()
-    let name = document.getElementsByClassName("name")
-})
 
+function Reg(name, gender, address, education, profession) {
+    this.name = name;
+    this.gender = gender;
+    this.address = address;
+    this.education = education;
+    this.profession = profession;
+}
 
-// function Reg(name, gender, address, education, profession) {
-//     this.name = name;
-//     this.gender = gender;
-//     this.address = address;
-//     this.education = education;
-//     this.profession = profession;
-// }
-// function check() {
-//     let name = document.getElementsByClassName("name")
-//     name.value
-// }
+function getData(){
 
+var na = document.getElementById("name").value;
+var ge = document.getElementById("gender").value;
+var ad = document.getElementById("address").value;
+var ed = document.getElementById("education").value;
+var pr = document.getElementById("profession").value;
 
+var pop = new Reg(na, ge, ad, ed, pr);
 
-// var reg1 = new Reg("Ahmed", "m", "Karachi", "B.A", "Assistant");
-// var reg2 = new Reg("Ayesha", "f", "Karachi", "MBBS", "Doctor");
-// var reg3 = new Reg("Irfan", "m", "Karachi", "MBA", "Managing Director");
-// console.log(reg1);
+document.write(pop.name+" "+pop.gender+" "+pop.address+" "+pop.education+" "+pop.profession);
+}
